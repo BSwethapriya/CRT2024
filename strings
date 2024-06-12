@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+    char str[50];
+    printf("Enter a string:");
+    fgets(str,50,stdin);
+    int c=0,i;
+    for(i=0;str[i]!='\0';i++)
+    {
+        c++;
+    }
+   printf("%d",c);
+
+}
