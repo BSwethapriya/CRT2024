@@ -1,0 +1,30 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+      char a;
+      Scanner s=new Scanner(System.in);
+      a=s.next().charAt(0);
+    if(a>=65&&a<=98)
+    {
+        System.out.printf("Upper");
+    }
+    else
+        if(a>=97&&a<=122)
+        {
+            System.out.printf("Lower");
+        }
+    else
+        if(a>=48&&a<=57)
+        {
+            System.out.printf("Number");
+        }
+    else
+        if(a>=33&&a<=43)
+    {
+        System.out.printf("Symbol");
+    }
+    }
+}
