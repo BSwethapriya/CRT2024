@@ -1,0 +1,27 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution
+{
+
+    public static void main(String[] args) 
+    {
+        int d,m,y,ns,sum=0,product;
+        Scanner s=new Scanner(System.in);
+        d=s.nextInt();
+        m=s.nextInt();
+        y=s.nextInt();
+        ns=s.nextInt();
+        sum=d+m+y;
+        product=4*3;
+        if(sum%product==0&&ns>=50&&ns<=100)
+        {
+          
+              System.out.println("Cinema Day");
+        }
+          else
+          {
+              System.out.println("Not a Cinema Day");
+          }
+    }
+}
