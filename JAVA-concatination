@@ -1,0 +1,10 @@
+class Test
+{
+public static void main(String args[])
+{
+String str="df";
+String str1=str.concat("gdjad");
+System.out.println(str);
+System.out.println(str1);
+}
+}
