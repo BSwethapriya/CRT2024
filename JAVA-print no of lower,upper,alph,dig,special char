@@ -1,0 +1,31 @@
+import java.util.*;
+class Test
+{
+public static void main(String args[])
+{
+Scanner s=new Scanner(System.in);
+String str=s.nextLine();
+int al=0,uc=0,lc=0,di=0,sc=0;
+for(int i=0;i<str.length();i++)
+{
+char ch=str.charAt(i);
+if(Character.isLetter(ch))
+{
+ al++;
+   if(Character.isUpperCase(ch))
+     uc++;
+   else
+     lc++;
+ }
+ else if(Character.isDigit(ch))
+ di++;
+ else
+ sc++;
+}
+System.out.println("Alphabeta="+al);
+System.out.println("Uppercase="+uc);
+System.out.println("Lowercase="+lc);
+System.out.println("Digits="+di);
+System.out.println("special char="+sc);
+}
+}
