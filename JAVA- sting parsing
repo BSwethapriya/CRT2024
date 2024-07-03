@@ -1,0 +1,11 @@
+import java.util.*;
+class Test
+{
+ public static void main(String args[])
+ {
+  Scanner s=new Scanner(System.in);
+  String str="456";
+  String str1="123";
+  System.out.println(Integer.parseInt(str)+Integer.parseInt(str1));
+ }
+}
