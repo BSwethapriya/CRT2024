@@ -1,0 +1,37 @@
+interface Vehicle
+{
+   void noOfWheels();
+}
+class Car implements Vehicle
+{
+public void noOfWheels()
+{
+System.out.println("4 Wheels");
+}
+}
+class Bus implements Vehicle
+{
+public void noOfWheels()
+{
+System.out.println("6 Weeks");
+}
+}
+class Auto implements Vehicle
+{
+public void noOfWheels()
+{
+System.out.println("3 wheels");
+}
+}
+class Teest
+{
+public static void main(String args[])
+{
+  Car c=new Car();
+  c.noOfWheels();
+  Bus b=new Bus();
+  b.noOfWheels();
+  Auto a=new Auto();
+  a.noOfWheels();
+}
+}  
