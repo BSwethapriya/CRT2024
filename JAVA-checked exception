@@ -4,7 +4,7 @@ class Test
 public static void main(String args[])throws InterruptedException
 {
   System.out.println("Java");
-  Thread.sleep(10000);
+  Thread.sleep(1000);
   System.out.println("Python");
 }
 }
