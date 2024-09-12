@@ -60,7 +60,7 @@ class Test
    if(ch==1)
    {
     int x;
-    System.out.println("Eneter an element");
+    System.out.println("Enter an element");
     x=s.nextInt();
     s1.create(x);
    }
