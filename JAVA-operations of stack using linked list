@@ -1,0 +1,95 @@
+import java.util.Scanner;
+class Node
+{
+ int data;
+ Node next;
+
+ Node(int x)
+ {
+ data=x;
+ next=null;
+ }
+}
+class MyStack
+{
+  Node head;
+  MyStack()
+  {
+   head=null;
+  }
+
+void push(int x)
+{
+ Node n=new Node(x);
+ if(n==null)
+ {
+ System.out.println("Stack is overflow");
+ return;
+ } 
+ if(head==null)
+ { 
+  head=n;
+ }
+ else
+ {
+ n.next=head;
+ head=n;
+ }
+}
+void pop()
+{
+ Node temp=head;
+ if(head==null)
+ {
+ System.out.println("Stack is underflow");
+ return;
+ }
+ else
+ System.out.println(temp.data+"is deleted");
+ temp=temp.next;
+}
+void display()
+{
+ Node temp=head;
+ if(head==null)
+ {
+ System.out.println("Stack is empty");
+ return; 
+ }
+ else
+ {
+  for(temp=head;temp!=null;temp=temp.next)
+  {
+  System.out.println(temp.data+" ");
+  }
+ }
+}
+}
+class StackLi
+{
+ public static void main(String args[])
+ {
+  Scanner s=new Scanner(System.in);
+  MyStack s1=new MyStack();
+  for(;;)
+  {
+  System.out.println("1.PUSH\n2.POP\n3.PRINT\n4.Exit");
+  System.out.println("Enter choice");
+  int ch=s.nextInt();
+  if(ch==1)
+  {
+   System.out.println("Enter Element");
+   int x=s.nextInt();
+   s1.push(x);
+  }
+  else if(ch==2)
+      s1.pop();
+  else if(ch==3)
+      s1.display();
+  else if(ch==4)
+       break;
+  else
+       System.out.println("Invalid choice");
+  }
+}
+}
