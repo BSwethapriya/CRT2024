@@ -1,0 +1,92 @@
+import java.util.*;
+class Node
+{
+ int data;
+ Node next;
+
+ Node(int x)
+ {
+ data=x;
+ next=null;
+ }
+}
+class MyQueue
+{
+  Node head,tail;
+  MyQueue()
+  {
+   head=tail=null;
+  }
+
+void enQueue(int x)
+{
+ Node n=new Node(x);
+ if(n==null)
+ {
+  System.out.println("queue is empty");
+  return;
+ }
+ if(head==null)
+ { 
+  head=tail=n;
+  return;
+ }
+ else
+ {
+ tail.next=n;
+ tail=n;
+ }
+}
+void deQueue()
+{
+ if(head==null)
+ {
+ System.out.println("Queue is underflow");
+ return;
+ }
+ else
+ System.out.println(head.data+"is deleted");
+ head=head.next;
+}
+void display()
+{
+ Node temp;
+ if(head==null)
+ {
+ System.out.println("Queue is empty");
+ return; 
+ }
+ for(temp=head;temp!=null;temp=temp.next)
+  {
+  System.out.println(temp.data+" ");
+  } 
+}
+}
+class QueueLi
+{
+ public static void main(String args[])
+ {
+  Scanner s=new Scanner(System.in);
+  MyQueue s1=new MyQueue();
+  for(;;)
+  {
+  System.out.println("1.ENQUEUE\n2.DEQUEUE\n3.PRINT\n4.Exit");
+  System.out.println("Enter choice");
+  int ch=s.nextInt();
+  if(ch==1)
+  {
+   System.out.println("Enter Element");
+   int x=s.nextInt();
+   s1.enQueue(x);
+  }
+  else if(ch==2)
+      s1.deQueue();
+  else if(ch==3)
+      s1.display();
+  else if(ch==4)
+       break;
+  else
+       System.out.println("Invalid choice");
+  }
+}
+}
