@@ -1,0 +1,19 @@
+import java.util.*;
+public class Testa
+{
+public static void main(String args[])
+{
+ HashMap<Integer,String> h1=new HashMap<>();
+ h1.put(111,"sss");
+ h1.put(123,"ppp");
+ h1.put(105,"kkk");
+ System.out.println(h1);
+ //h1.put(333,777);
+ //h1.put("maths",80);
+ System.out.println(h1);
+ h1.put(111,"rrr");
+ System.out.println(h1);
+}
+}
+
+
